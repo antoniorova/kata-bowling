@@ -1,12 +1,7 @@
 {
-    "name": "antoniorova/php-skeleton",
+    "name": "antoniorova/kata-bowling",
     "type": "project",
     "require": {
-        "symfony/framework-bundle": "^6.2",
-        "symfony/config": "^6.2",
-        "symfony/dotenv": "^6.2",
-        "symfony/dependency-injection": "^6.2",
-        "symfony/runtime": "^6.2",
         "webmozart/assert": "^1.11"
     },
     "require-dev": {
@@ -26,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Skeleton\\": "src/"
+            "Bowling\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Skeleton\\Tests\\": "tests/"
+            "Bowling\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -57,14 +52,14 @@
             "@infection",
             "@rector-check"
         ],
-        "cs-check": "ecs check src config",
-        "cs-fix": "ecs check src config --fix",
-        "inspect": "phpstan analyse src config -l9 --ansi --xdebug",
+        "cs-check": "ecs check src",
+        "cs-fix": "ecs check src --fix",
+        "inspect": "phpstan analyse src -l9 --ansi --xdebug",
         "test": "phpunit --colors=always",
         "psalm": "psalm --no-cache",
         "infection": "XDEBUG_MODE=coverage roave-infection-static-analysis-plugin",
-        "rector": "rector process src config",
-        "rector-check": "rector process src config --dry-run"
+        "rector": "rector process src",
+        "rector-check": "rector process src --dry-run"
     },
     "config": {
         "allow-plugins": {
